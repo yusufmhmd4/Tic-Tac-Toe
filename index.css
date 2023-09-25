@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+body>h1 {
+    font-family: Roboto;
+    font-size: 30px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+body>h1::before {
+    content: '';
+    bottom: -4px;
+    position: absolute;
+    width: 160px;
+    border: 1px solid #bfbfbf;
+}
+
+.game-container {
+    width: 100%;
+    min-height: 70vh;
+    margin: auto;
+    margin-top: auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 30px;
+
+}
+
+@media screen and (min-width:768px) {
+    .game-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.boxes-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    margin: auto;
+
+
+}
+
+.box {
+    font-family: Roboto;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #f3e9eb;
+}
+
+.b-t {
+    border-top: none;
+}
+
+.b-b {
+    border-bottom: none;
+}
+
+.b-l {
+    border-left: none;
+}
+
+.b-r {
+    border-right: none;
+}
+
+.result-container {
+    padding-left: 20px;
+}
+
+.game-result {
+    font-family: Roboto;
+    font-size: 30px;
+    color: #000;
+}
+
+#turn {
+    font-family: Roboto;
+    color: blue;
+    font-size: 20px;
+    font-weight: 900;
+
+}
+
+#turn::before {
+    content: 'Current Turn for ';
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#reset {
+    padding: 6px 14px;
+    border: none;
+    color: #fff;
+    font-family: Roboto;
+    background-color: #6528F7;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#result {
+    text-align: center;
+    margin-top: 30px;
+    font-family: Roboto;
+    font-size: 20px;
+    color: red;
+}
